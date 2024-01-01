@@ -23,28 +23,10 @@ app.add_middleware(
 )
 
 class InputSchema(BaseModel):
-    numberOfFamilyCreditCards: int
-    totalElectricityBillsPaidOnTimeLast2Years: int
-    totalElectricityBillsNotPaidOnTimeLast2Years: int
-    haveBeenLaidOff: bool
-    haveBeenBankrupted: bool
-    haveViolatedLaws: bool
-    haveForeclosure: bool
-    loanAmountsOverdueFor3059DaysInTheLast2Years: int
-    loanAmountsOverdueFor6089DaysInTheLast2Years: int
-    loanAmountsOverdueFor90DaysInTheLast2Years: int
-    numberOfLoanPaidOnTimeInTheLast2Years: int
-    averageFamilyMemberCreditAccountsAge: int
-    numberOfNewFamilyMemberCreditAccountsInTheLast2Years: int
-    numberOfFamilyHouses: int
-    numberOfFamilyMembers: int
-    gender: bool
-    educationStatus: str
-    marriageStatus: str
-    taxInTheLastlYear: float
-    loanType: str
-    loanValue: float
-    collateralValue: float
+    loan_type: str
+    loan_value: float
+    collateral_value: float
+    identity_number: int
 
     
 @app.get("/get-info")
@@ -64,8 +46,15 @@ def get_info() -> dict:
     return rd
 
 
-@app.post("/predict-credit-score")
-def predict_credit_score(
+@app.post("/predict-loan-probability")
+def predict_loan_probability(
     input: InputSchema
 ) -> float:
-    return random.randint(0, 1000)
+    if input.collateral_value > 2*input.loan_value:
+        return 84.27
+    elif input.collateral_value > input.loan_value:
+        return 68.20
+    elif input.collateral_value < 0.5*input.loan_value:
+        return 20.15
+    else:
+        return 35.89

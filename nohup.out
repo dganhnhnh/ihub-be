@@ -1,0 +1,190 @@
+Traceback (most recent call last):
+  File "/home/nestquant-dev/ihub/ihub-be/deploy.py", line 12, in <module>
+    uvicorn.run("main:app", host="127.0.0.1", port=36001)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+    config.load()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/config.py", line 467, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/nestquant-dev/ihub/ihub-be/main.py", line 18, in <module>
+    CORSMiddleware,
+NameError: name 'CORSMiddleware' is not defined
+INFO:     Started server process [1881018]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44412 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:54776 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:54778 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:54792 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:59880 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:59896 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:55418 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:55434 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:40350 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     Started server process [1891653]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38114 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38126 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:38692 - "POST /predict-loan HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:56420 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:39548 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41656 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:45164 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:45176 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34738 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34740 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34750 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:51052 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:51054 - "POST /predict-loan HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:52300 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:47420 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43916 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43924 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43932 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43946 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43948 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:56520 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:54466 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:36830 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:36840 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:33798 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:51918 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34504 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43124 - "POST /predict-loan HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:43138 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:47444 - "POST /predict-loan HTTP/1.0" 404 Not Found
+INFO:     127.0.0.1:55580 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:50472 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:57572 - "GET / HTTP/1.0" 404 Not Found
+INFO:     Started server process [1902816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 36001): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [1903444]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51304 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:51318 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:57968 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43200 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:43214 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:39868 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:39134 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60312 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60322 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60338 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60352 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60354 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:52748 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:59624 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:59630 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:47784 - "POST /predict-loan-probability HTTP/1.0" 404 Not Found
+INFO:     Started server process [1904055]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50706 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:39700 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:39712 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:52092 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:52098 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:52102 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+Traceback (most recent call last):
+  File "/home/nestquant-dev/ihub/ihub-be/deploy.py", line 12, in <module>
+    uvicorn.run("main:app", host="127.0.0.1", port=36001)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+    config.load()
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/config.py", line 467, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/home/nestquant-dev/.pyenv/versions/3.10.8/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/nestquant-dev/ihub/ihub-be/main.py", line 26
+    loan_type: str,
+                  ^
+SyntaxError: invalid syntax
+INFO:     Started server process [1904613]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57158 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:57170 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     127.0.0.1:57180 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:55812 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:44344 - "OPTIONS /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:44346 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1904613]
+INFO:     Started server process [1905221]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:45350 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:35640 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:36276 - "OPTIONS /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:36288 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:45112 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:35392 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:58066 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:58068 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     Started server process [1914485]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:36001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:46216 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:46226 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:46236 - "OPTIONS /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:46250 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:46264 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:59236 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:41324 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:60490 - "POST /predict-loan-probability HTTP/1.0" 422 Unprocessable Entity
+INFO:     127.0.0.1:60496 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:36174 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:52350 - "GET /get-info HTTP/1.0" 200 OK
+INFO:     127.0.0.1:57946 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:55474 - "POST /predict-loan-probability HTTP/1.0" 200 OK
+INFO:     127.0.0.1:45384 - "GET /docs HTTP/1.0" 200 OK
+INFO:     127.0.0.1:45386 - "GET /openapi.json HTTP/1.0" 200 OK
