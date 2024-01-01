@@ -1,0 +1,28 @@
+@startuml
+actor           User
+participant     App
+participant     KhoiThuThapThongTin
+participant     KhoiDichVuMoHinh
+database        KhoDuLieuTho
+database        CoSoDuLieuInsights
+
+App++
+User -> App++                                       : truy vấn theo số CCCD
+App -> KhoiThuThapThongTin++                   : lấy thông tin người dùng
+KhoiThuThapThongTin -> KhoDuLieuTho           : lấy dữ liệu
+KhoDuLieuTho --> KhoiThuThapThongTin          : trả về
+KhoiDichVuMoHinh++
+KhoiThuThapThongTin --> KhoiDichVuMoHinh           : trả về các trường dữ liệu để dự đoán điểm tín dụng
+KhoiThuThapThongTin--
+KhoiDichVuMoHinh --> App                                : trả về dự đoán điểm tín dụng
+
+alt người dùng có dữ liệu lịch sử
+    CoSoDuLieuInsights++
+    App -> CoSoDuLieuInsights                         : lấy điểm tín dụng của người dùng
+    CoSoDuLieuInsights --> App                        : trả về
+end
+
+KhoiDichVuMoHinh --> App                                : trả về
+KhoiDichVuMoHinh--
+App --> User                                        : trả về kết quả
+@enduml

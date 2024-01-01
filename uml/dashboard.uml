@@ -1,0 +1,29 @@
+@startuml
+actor           User
+participant     App
+participant     UserInfoCollectionEngine
+participant     ModelServing
+participant     PreprocessingEngine
+database        DataWarehouse
+database        InsightsDatabase
+
+App++
+User -> App++                                       : query by ID number
+App -> UserInfoCollectionEngine++                   : get user information
+UserInfoCollectionEngine -> DataWarehouse           : get data
+DataWarehouse --> UserInfoCollectionEngine          : return
+ModelServing++
+UserInfoCollectionEngine --> ModelServing           : return features for credit score prediction
+UserInfoCollectionEngine--
+ModelServing --> App                                : return credit score prediction
+
+alt user has historical data
+    InsightsDatabase++
+    App -> InsightsDatabase                         : get credit score of user
+    InsightsDatabase --> App                        : return
+
+end
+ModelServing --> App                        : return
+ModelServing--
+App --> User                                : return results
+@enduml
