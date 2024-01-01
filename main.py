@@ -41,8 +41,12 @@ def get_info() -> dict:
     data = rows[1:]
     rr = random.choice(data)
     rd = dict(zip(header, rr))
-    # rd without creditStatus attribute
     del rd['creditStatus']
+    total_amount_overdue = float(rd['loanAmountsOverdueFor3059DaysInTheLast2Years']) + float(rd['loanAmountsOverdueFor6089DaysInTheLast2Years']) + float(rd['loanAmountsOverdueFor90DaysInTheLast2Years'])
+    total_amount_overdue *= 0.6
+    rand_ratios = [random.random() for i in range(12)]
+    rand_ratios = [int(total_amount_overdue*i/sum(rand_ratios))//1000*1000 for i in rand_ratios]
+    rd['loanAmountsOverdueByMonth'] = rand_ratios
     return rd
 
 
